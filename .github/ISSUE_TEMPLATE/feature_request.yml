@@ -1,88 +1,88 @@
-name: ✨ 功能请求
-description: 建议新功能或改进现有功能
+name: ✨ 기능 요청
+description: 새로운 기능 제안 또는 기존 기능 개선
 title: "[Feature]: "
 labels: ["enhancement", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        感谢您提出功能请求！请详细描述您的建议，这将帮助我们更好地理解您的需求。
+        기능 요청을 제출해 주셔서 감사합니다! 제안 내용을 자세히 설명해 주시면 귀하의 요구 사항을 더 잘 이해하는 데 도움이 됩니다.
 
   - type: dropdown
     id: component
     attributes:
-      label: 相关组件
-      description: 选择功能请求相关的组件
+      label: 관련 구성 요소
+      description: 기능 요청과 관련된 구성 요소를 선택하세요
       options:
-        - 前端界面
-        - 后端服务及API
-        - 文档解析服务
-        - 向量数据库
-        - 模型服务
-        - 配置管理
-        - 其他
+        - 프론트엔드 인터페이스
+        - 백엔드 서비스 및 API
+        - 문서 파싱 서비스
+        - 벡터 데이터베이스
+        - 모델 서비스
+        - 구성 관리
+        - 기타
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: 问题描述
-      description: 请描述您遇到的问题或当前功能的不足
-      placeholder: "当前功能有什么问题或限制？"
+      label: 문제 설명
+      description: 겪고 있는 문제나 현재 기능의 부족한 점을 설명해 주세요
+      placeholder: "현재 기능에 어떤 문제나 제한이 있나요?"
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: 建议的解决方案
-      description: 请详细描述您希望看到的功能或改进
-      placeholder: "您希望如何解决这个问题？"
+      label: 제안하는 해결책
+      description: 보고 싶은 기능이나 개선 사항을 자세히 설명해 주세요
+      placeholder: "이 문제를 어떻게 해결하고 싶으신가요?"
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: 替代方案
-      description: 描述您考虑过的其他解决方案
-      placeholder: "您是否考虑过其他解决方案？"
+      label: 대안
+      description: 고려했던 다른 해결책을 설명해 주세요
+      placeholder: "다른 해결책을 고려해 보셨나요?"
 
   - type: dropdown
     id: priority
     attributes:
-      label: 优先级
-      description: 您认为这个功能请求的优先级如何？
+      label: 우선순위
+      description: 이 기능 요청의 우선순위가 어느 정도라고 생각하시나요?
       options:
-        - 低 - 可以稍后考虑
-        - 中 - 有一定价值
-        - 高 - 对工作流程很重要
-        - 紧急 - 阻塞了重要工作
+        - 낮음 - 나중에 고려해도 됨
+        - 중간 - 어느 정도 가치가 있음
+        - 높음 - 워크플로우에 중요함
+        - 긴급 - 중요한 작업을 차단함
     validations:
       required: true
 
   - type: textarea
     id: usecase
     attributes:
-      label: 使用场景
-      description: 请描述这个功能的具体使用场景
-      placeholder: "在什么情况下您会使用这个功能？"
+      label: 사용 시나리오
+      description: 이 기능의 구체적인 사용 시나리오를 설명해 주세요
+      placeholder: "어떤 상황에서 이 기능을 사용하게 되나요?"
 
   - type: textarea
     id: additional
     attributes:
-      label: 补充信息
-      description: 任何其他相关信息、截图或链接
-      placeholder: "添加任何其他相关信息..."
+      label: 추가 정보
+      description: 기타 관련 정보, 스크린샷 또는 링크
+      placeholder: "기타 관련 정보를 추가해 주세요..."
 
   - type: checkboxes
     id: terms
     attributes:
-      label: 确认事项
-      description: 请确认以下事项
+      label: 확인 사항
+      description: 다음 사항을 확인해 주세요
       options:
-        - label: 我已经搜索了现有的 issues，确认这是一个新的功能请求
+        - label: 기존 이슈를 검색했으며, 이것이 새로운 기능 요청임을 확인했습니다
           required: true
-        - label: 我理解这个功能请求可能需要讨论和评估
+        - label: 이 기능 요청에 대해 토론과 평가가 필요할 수 있음을 이해합니다
           required: true

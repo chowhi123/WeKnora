@@ -1,43 +1,43 @@
-name: 🐛 Bug 报告
-description: 报告一个 bug 或问题
+name: 🐛 버그 보고
+description: 버그 또는 문제 보고
 title: "[Bug]: "
 labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        感谢您报告 bug！请填写以下信息帮助我们快速定位和解决问题。
+        버그를 제보해 주셔서 감사합니다! 문제를 빠르게 파악하고 해결할 수 있도록 다음 정보를 작성해 주세요.
 
   - type: dropdown
     id: component
     attributes:
-      label: 相关组件
-      description: 选择出现问题的组件
+      label: 관련 구성 요소
+      description: 문제가 발생한 구성 요소를 선택하세요
       options:
-        - 前端界面
-        - 后端服务及API
-        - 文档解析服务
-        - 向量数据库
-        - 模型服务
-        - 其他
+        - 프론트엔드 인터페이스
+        - 백엔드 서비스 및 API
+        - 문서 파싱 서비스
+        - 벡터 데이터베이스
+        - 모델 서비스
+        - 기타
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Bug 描述
-      description: 请详细描述遇到的问题
-      placeholder: "请描述 bug 的具体表现..."
+      label: 버그 설명
+      description: 발생한 문제를 자세히 설명해 주세요
+      placeholder: "버그의 구체적인 증상을 설명해 주세요..."
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: 期望行为
-      description: 描述您期望的正确行为
-      placeholder: "应该发生什么..."
+      label: 기대 동작
+      description: 기대하는 올바른 동작을 설명해 주세요
+      placeholder: "어떤 일이 일어나야 하나요..."
     validations:
       required: true
 
@@ -45,38 +45,38 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 📋 日志收集指南
+        ## 📋 로그 수집 가이드
         
-        请按照以下步骤收集相关日志：
+        관련 로그를 수집하려면 다음 단계를 따르세요:
         
         docker compose logs -f --tail=1000 app docreader postgres
         
-        请重现问题并收集相关日志，然后粘贴到下面的日志字段中。
+        문제를 재현하고 관련 로그를 수집한 후 아래 로그 필드에 붙여넣어 주세요.
 
   - type: textarea
     id: logs
     attributes:
-      label: 相关日志
-      description: 请按照上面的指南收集并粘贴相关日志
+      label: 관련 로그
+      description: 위 가이드에 따라 관련 로그를 수집하여 붙여넣어 주세요
       placeholder: |
-        请粘贴从以下命令收集的日志：
+        다음 명령에서 수집된 로그를 붙여넣어 주세요:
         docker compose logs -f --tail=1000 app docreader postgres
       render: shell
 
   - type: input
     id: os
     attributes:
-      label: 操作系统
-      description: 您当前使用的操作系统
-      placeholder: "例如: macOS 13.0, Ubuntu 20.04, Windows 11"
+      label: 운영 체제
+      description: 현재 사용 중인 운영 체제
+      placeholder: "예: macOS 13.0, Ubuntu 20.04, Windows 11"
     validations:
       required: true
 
   - type: checkboxes
     id: terms
     attributes:
-      label: 确认事项
-      description: 请确认以下事项
+      label: 확인 사항
+      description: 다음 사항을 확인해 주세요
       options:
-        - label: 我已经搜索了现有的 issues，确认这是一个新问题
+        - label: 기존 이슈를 검색했으며, 이것이 새로운 문제임을 확인했습니다
           required: true
